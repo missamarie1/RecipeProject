@@ -6,10 +6,12 @@ import SimilarRecipeResponse from "../models/SimilarRecipeResponse";
 
 const apiKey: string = process.env.REACT_APP_RECIPE_API_KEY || "";
 
-export const getRecipesBySearch = (): Promise<RecipeResponseSearch> => {
+export const getRecipesBySearch = (
+  searchTerm: string
+): Promise<RecipeResponseSearch> => {
   return axios
     .get(`https://api.spoonacular.com/recipes/complexSearch`, {
-      params: { apiKey },
+      params: { apiKey, query: searchTerm },
     })
     .then((res) => res.data);
 };

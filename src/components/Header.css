@@ -1,0 +1,21 @@
+.Header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: end;
+  background-color: #0f9db0;
+  color: white;
+  font-family: "Gloria Hallelujah", cursive;
+}
+.Header .diner {
+  display: flex;
+  color: black;
+  height: 100px;
+  width: 100px;
+}
+
+.Header .heart {
+  display: flex;
+
+  color: white;
+}
