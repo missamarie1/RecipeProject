@@ -1,0 +1,12 @@
+.SearchForm {
+  width: 50%;
+}
+
+.SearchForm .iconify {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.SearchForm .option {
+  background-color: #0f9db0;
+}
