@@ -27,10 +27,10 @@ const Main = () => {
     setSearchTerm(query);
   };
   const updateRestrictions = (query: string): void => {
-    setSearchTerm(query);
+    setRestrictions(query);
   };
   const updateGenre = (query: string): void => {
-    setSearchTerm(query);
+    setGenre(query);
   };
 
   return (

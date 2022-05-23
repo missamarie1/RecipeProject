@@ -39,7 +39,7 @@ const SearchForm = ({
       <select
         name="diets"
         id="diets"
-        onChange={(e) => setSearch(e.target.value)}
+        onChange={(e) => setDiet(e.target.value)}
         value={diet}
       >
         {" "}
@@ -53,7 +53,7 @@ const SearchForm = ({
       <select
         name="type"
         id="type"
-        onChange={(e) => setSearch(e.target.value)}
+        onChange={(e) => setType(e.target.value)}
         value={type}
       >
         <option className="sort" value="" selected>
