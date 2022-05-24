@@ -1,21 +1,32 @@
 .Header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  text-align: end;
+  align-items: center;
+  position: relative;
   background-color: #0f9db0;
   color: white;
   font-family: "Gloria Hallelujah", cursive;
+  /* margin: 10px; */
+  width: 100vw;
+  height: 20vh;
+}
+.Header h1 {
+  margin: 10px;
 }
 .Header .diner {
   display: flex;
   color: black;
-  height: 100px;
-  width: 100px;
+  margin: 10px;
+  height: 75px;
+  width: 75px;
 }
 
 .Header .heart {
-  display: flex;
-
+  /* display: flex; */
+  position: absolute;
+  bottom: 0;
+  right: 0;
   color: white;
+  padding: 10px;
 }

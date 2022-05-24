@@ -37,7 +37,7 @@ const Main = () => {
         updateRestrictions={updateRestrictions}
         updateGenre={updateGenre}
       />
-      <button>Random Recipe</button>
+      <button className="random">Random Recipe</button>
       <ResultsList recipeArray={recipeArray} />
     </div>
   );

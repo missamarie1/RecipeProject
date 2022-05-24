@@ -25,17 +25,23 @@ const SearchForm = ({
 
   return (
     <form className="SearchForm" onSubmit={submitHandler}>
-      <button>
+      <div className="search-bar">
         {" "}
-        <span className="iconify" data-icon="akar-icons:search"></span>
-      </button>
-      <input
-        type="text"
-        name="search"
-        id="search"
-        onChange={(e) => setSearch(e.target.value)}
-        value={search}
-      />
+        <button className="search-button">
+          {" "}
+          <span
+            className="iconify search-icon"
+            data-icon="akar-icons:search"
+          ></span>
+        </button>
+        <input
+          type="text"
+          name="search"
+          id="search"
+          onChange={(e) => setSearch(e.target.value)}
+          value={search}
+        />
+      </div>
       <select
         name="diets"
         id="diets"

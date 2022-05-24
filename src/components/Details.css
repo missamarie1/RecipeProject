@@ -1,0 +1,82 @@
+.Details {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.Details .picture {
+  margin-bottom: 5px;
+  border-radius: 5px;
+  width: 80vw;
+  /* height: 50vh; */
+  position: relative;
+}
+
+.Details .stuff {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 80vw;
+
+  /* position: absolute; */
+}
+.Details .fa-pinterest {
+  margin-top: 5px;
+  padding: 5px;
+
+  color: red;
+}
+
+.Details .heart {
+  margin-top: 5px;
+  padding: 5px;
+}
+.Details h2 {
+  text-align: center;
+  font-weight: 3ß00;
+  width: 80vw;
+}
+
+.Details .icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  width: 80vw;
+  color: #0f9db0;
+  padding: 5px;
+}
+
+.Details .clock {
+  margin-top: 5px;
+  color: #0f9db0;
+}
+
+.Details p {
+  font-weight: 100;
+}
+
+.Details h3 {
+  padding: 10px;
+  font-weight: 700;
+}
+.Details .ingredients {
+  margin: 10px;
+  font-weight: 300;
+}
+
+.Details .ingredients-list {
+  font-weight: 100;
+}
+
+.Details .instructions {
+  margin: 10px;
+}
+.Details li {
+  padding: 5px;
+}

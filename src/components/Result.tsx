@@ -14,7 +14,7 @@ const Result = ({ recipe }: Props) => {
   const isFav: boolean = isThisFav(recipe.id);
   return (
     <li className="Result">
-      <img src={recipe.image} alt={recipe.title} />
+      <img className="picture" src={recipe.image} alt={recipe.title} />
       <h2>
         <Link to={`/details/${recipe.id}`}>{recipe.title}</Link>
       </h2>
