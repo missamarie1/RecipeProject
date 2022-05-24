@@ -64,9 +64,6 @@ const SearchForm = ({
         <option value="appetizer">Appetizer</option>
         <option value="side-dish">Side Dish</option>
       </select>
-      <div>
-        <button>Random Recipe</button>
-      </div>
     </form>
   );
 };
