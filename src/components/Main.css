@@ -1,0 +1,20 @@
+.Main {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.Main button {
+  border: 10px;
+  box-shadow: 5px;
+  padding: 5px;
+  background-color: #0f9db0;
+  color: white;
+}
+
+.Main .random {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+}

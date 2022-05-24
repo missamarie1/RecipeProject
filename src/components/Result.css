@@ -1,0 +1,19 @@
+.Result {
+  margin: 10px;
+  padding: 10px;
+}
+
+.Result .picture {
+  border-radius: 10px;
+  box-shadow: 5px;
+}
+
+.Result a {
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.Result .fa-pinterest {
+  color: red;
+}

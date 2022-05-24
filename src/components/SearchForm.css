@@ -1,12 +1,21 @@
 .SearchForm {
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 80vw; */
+  box-sizing: border-box;
 }
 
-.SearchForm .iconify {
-  background-color: white;
-  border-radius: 5px;
+.SearchForm .search-bar {
+  display: flex;
+  width: 80vw;
 }
 
-.SearchForm .option {
-  background-color: #0f9db0;
+.SearchForm select {
+  width: 80vw;
+}
+
+.SearchForm #search {
+  flex: 1;
 }

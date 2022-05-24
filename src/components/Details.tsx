@@ -19,47 +19,61 @@ const Details = () => {
   }, []);
   return (
     <div className="Details">
-      <img src={recipe?.image} alt={recipe?.title} />
+      <img className="picture" src={recipe?.image} alt={recipe?.title} />
+      <div className="stuff">
+        <span className={`iconify heart`} data-icon="akar-icons:heart"></span>
+        <i className="fa-brands fa-pinterest"></i>
+      </div>
+
       <h2>
         {/* make link to take to original Url */}
         {recipe?.title}
       </h2>
-      {recipe?.dairyFree && (
-        <span className="iconify" data-icon="mdi:cow-off"></span>
-      )}
-      {recipe?.glutenFree && (
-        <span className="iconify" data-icon="mdi:barley-off"></span>
-      )}
-      {recipe?.vegetarian && (
-        <span className="iconify" data-icon="charm:plant-pot"></span>
-      )}
 
-      {recipe?.vegan && (
-        <span className="iconify" data-icon="emojione-monotone:letter-v"></span>
-      )}
-      {/* <span
+      <div className="icons">
+        {recipe?.vegan && (
+          <span
+            className="iconify V"
+            data-icon="emojione-monotone:letter-v"
+          ></span>
+        )}
+
+        {recipe?.dairyFree && (
+          <span className="iconify dairy" data-icon="mdi:cow-off"></span>
+        )}
+        {recipe?.glutenFree && (
+          <span className="iconify GF" data-icon="mdi:barley-off"></span>
+        )}
+        {recipe?.vegetarian && (
+          <span className="iconify veggie" data-icon="charm:plant-pot"></span>
+        )}
+
+        {/* <span
         className={`iconify heart${isFav ? " fav" : ""}`}
         data-icon="akar-icons:heart"
         onClick={() => addFav()}
       ></span> */}
-      <i className="fa-brands fa-pinterest"></i>
-
+      </div>
       <p>
-        <span className="iconify" data-icon="akar-icons:clock"></span>{" "}
+        <span className="iconify clock" data-icon="akar-icons:clock"></span>{" "}
         <span>{recipe?.readyInMinutes}</span>
       </p>
-      <h3>Ingredients:</h3>
-      <ul>
-        {recipe?.extendedIngredients.map((ingredient) => (
-          <Ingredient key={ingredient.id} ingredient={ingredient} />
-        ))}
-      </ul>
-      <h3>Instructions:</h3>
-      <ol>
-        {recipe?.analyzedInstructions.map((instruction) =>
-          instruction.steps.map((step) => <li>{step.step}</li>)
-        )}
-      </ol>
+      <div className="ingredients">
+        <h3>Ingredients:</h3>
+        <ul className="ingredients-list">
+          {recipe?.extendedIngredients.map((ingredient) => (
+            <Ingredient key={ingredient.id} ingredient={ingredient} />
+          ))}
+        </ul>
+      </div>
+      <div className="instructions">
+        <h3>Instructions:</h3>
+        <ol>
+          {recipe?.analyzedInstructions.map((instruction) =>
+            instruction.steps.map((step) => <li>{step.step}</li>)
+          )}
+        </ol>
+      </div>
     </div>
   );
 };
