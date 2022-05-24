@@ -13,15 +13,12 @@ const Main = () => {
   const [restrictions, setRestrictions] = useState("");
   const [genre, setGenre] = useState("");
   useEffect(() => {
-    if (searchTerm) {
-      getRecipesBySearch(searchTerm).then((res) => {
-        console.log(res);
-        console.log(res.results);
-
-        setRecipeArray(res.results);
-      });
-    }
-  }, [searchTerm]);
+    getRecipesBySearch(searchTerm, restrictions, genre).then((res) => {
+      // console.log(res);
+      // console.log(res.results);
+      setRecipeArray(res.results);
+    });
+  }, [searchTerm, restrictions, genre]);
 
   const updateSearchTerm = (query: string): void => {
     setSearchTerm(query);
@@ -40,6 +37,7 @@ const Main = () => {
         updateRestrictions={updateRestrictions}
         updateGenre={updateGenre}
       />
+      <button>Random Recipe</button>
       <ResultsList recipeArray={recipeArray} />
     </div>
   );

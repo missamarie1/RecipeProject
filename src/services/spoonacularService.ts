@@ -7,11 +7,13 @@ import SimilarRecipeResponse from "../models/SimilarRecipeResponse";
 const apiKey: string = process.env.REACT_APP_RECIPE_API_KEY || "";
 
 export const getRecipesBySearch = (
-  searchTerm: string
+  searchTerm: string,
+  restrictions: string,
+  genre: string
 ): Promise<RecipeResponseSearch> => {
   return axios
     .get(`https://api.spoonacular.com/recipes/complexSearch`, {
-      params: { apiKey, query: searchTerm },
+      params: { apiKey, query: searchTerm, diet: restrictions, type: genre },
     })
     .then((res) => res.data);
 };
@@ -32,7 +34,7 @@ export const getSimilarRecipes = (
     })
     .then((res) => res.data);
 };
-export const getInfoById = (id: number): Promise<RecipeInformation> => {
+export const getInfoById = (id: string): Promise<RecipeInformation> => {
   return axios
     .get(`https://api.spoonacular.com/recipes/${id}/information`, {
       params: { apiKey },

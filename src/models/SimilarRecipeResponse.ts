@@ -1,5 +1,5 @@
 export default interface SimilarRecipeResponse {
-  id: number;
+  id: string;
   title: string;
   sourceUrl: string;
 }

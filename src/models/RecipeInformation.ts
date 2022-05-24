@@ -1,6 +1,13 @@
-interface Ingredients {
+export interface Ingredients {
   name: string;
   original: string;
+  id: string;
+}
+interface Steps {
+  step: string;
+}
+interface Instructions {
+  steps: Steps[];
 }
 
 export default interface RecipeInformation {
@@ -9,9 +16,10 @@ export default interface RecipeInformation {
   glutenFree: boolean;
   dairyFree: boolean;
   readyInMinutes: number;
-  id: number;
+  id: string;
   title: string;
   image: string;
-  instructions: string;
+  analyzedInstructions: Instructions[];
   extendedIngredients: Ingredients[];
+  sourceUrl: string;
 }
