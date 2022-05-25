@@ -2,7 +2,10 @@ import { useEffect, useState } from "react";
 import RecipeInformation from "../models/RecipeInformation";
 import RecipeResponseSearch from "../models/RecipeResponseSearch";
 import SearchResult from "../models/SearchResult";
-import { getRecipesBySearch } from "../services/spoonacularService";
+import {
+  getRandomRecipe,
+  getRecipesBySearch,
+} from "../services/spoonacularService";
 import "./Main.css";
 import ResultsList from "./ResultsList";
 import SearchForm from "./SearchForm";
@@ -29,7 +32,11 @@ const Main = () => {
   const updateGenre = (query: string): void => {
     setGenre(query);
   };
-
+  const getAndSetRandomRecipe = () => {
+    getRandomRecipe().then((res) => {
+      setRecipeArray(res.recipes);
+    });
+  };
   return (
     <div className="Main">
       <SearchForm
@@ -37,7 +44,9 @@ const Main = () => {
         updateRestrictions={updateRestrictions}
         updateGenre={updateGenre}
       />
-      <button className="random">Random Recipe</button>
+      <button className="random" onClick={getAndSetRandomRecipe}>
+        Random Recipe
+      </button>
       <ResultsList recipeArray={recipeArray} />
     </div>
   );

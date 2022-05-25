@@ -30,7 +30,7 @@ export const getSimilarRecipes = (
 ): Promise<SimilarRecipeResponse[]> => {
   return axios
     .get(`https://api.spoonacular.com/recipes/${id}/similar`, {
-      params: { apiKey },
+      params: { apiKey, number: 3 },
     })
     .then((res) => res.data);
 };
