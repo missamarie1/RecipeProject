@@ -15,15 +15,20 @@ const Result = ({ recipe }: Props) => {
   return (
     <li className="Result">
       <img className="picture" src={recipe.image} alt={recipe.title} />
+      <div className="symbols" onClick={() => console.log("div was clicked")}>
+        {isFav ? (
+          <i
+            className="fa-solid fa-heart fav"
+            onClick={() => deleteFav(recipe.id)}
+          ></i>
+        ) : (
+          <i className="fa-solid fa-heart" onClick={() => addFav(recipe)}></i>
+        )}
+        <i className="fa-brands fa-pinterest"></i>{" "}
+      </div>
       <h2>
         <Link to={`/details/${recipe.id}`}>{recipe.title}</Link>
       </h2>
-      <span
-        className={`iconify heart${isFav ? " fav" : ""}`}
-        data-icon="akar-icons:heart"
-        onClick={() => addFav(recipe)}
-      ></span>
-      <i className="fa-brands fa-pinterest"></i>
     </li>
   );
 };

@@ -1,11 +1,15 @@
 .Result {
   margin: 10px;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .Result .picture {
   border-radius: 10px;
   box-shadow: 5px;
+  justify-content: center;
+  align-items: center;
 }
 
 .Result a {
@@ -14,6 +18,25 @@
   text-decoration: none;
 }
 
+.Result .symbols {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 40vw;
+}
+
 .Result .fa-pinterest {
   color: red;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.Results i.fa-heart {
+  padding: 5px;
+  margin-top: 5px;
+  color: white;
+}
+.Results .fav {
+  background-color: red;
 }

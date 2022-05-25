@@ -9,8 +9,8 @@ const ResultsList = ({ recipeArray }: Props) => {
   return (
     <div className="ResultsList">
       <ul className="results-list">
-        {recipeArray.map((recipe) => (
-          <Result key={recipe.id} recipe={recipe} />
+        {recipeArray.map((recipe, index) => (
+          <Result key={`${recipe.id}${index}`} recipe={recipe} />
         ))}
       </ul>
     </div>

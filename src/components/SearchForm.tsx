@@ -49,7 +49,7 @@ const SearchForm = ({
         value={diet}
       >
         {" "}
-        <option className="sort" value="" selected>
+        <option className="sort" value="">
           Sort By Diet
         </option>
         <option value="vegetarian">Vegetarian</option>
@@ -62,7 +62,7 @@ const SearchForm = ({
         onChange={(e) => setType(e.target.value)}
         value={type}
       >
-        <option className="sort" value="" selected>
+        <option className="sort" value="">
           Sort By Type
         </option>
         <option value="breakfast">Breakfast</option>
