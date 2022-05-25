@@ -6,17 +6,17 @@
   align-items: center;
 }
 
-.Main button {
+.Main .random {
   border: 10px;
   box-shadow: 5px;
   padding: 5px;
   background-color: #0f9db0;
   color: white;
-}
-
-.Main .random {
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 50vw;
+  margin: 5px;
+  padding: 8px, 0;
 }

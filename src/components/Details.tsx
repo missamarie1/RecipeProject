@@ -6,10 +6,12 @@ import RecipeInformation from "../models/RecipeInformation";
 import { getInfoById } from "../services/spoonacularService";
 import "./Details.css";
 import Ingredient from "./Ingredient";
+import SimilarItems from "./SimilarItems";
 
 const Details = () => {
   const id: string = useParams().id!;
   const [recipe, setRecipe] = useState<RecipeInformation>();
+  const [showKey, setShowKey] = useState(false);
   // const instructions = document.querySelector(".instructions-paragraph");
   // const { addFav, isThisFav, deleteFav } = useContext(FavoritesContext);
   // const isFav: boolean = isThisFav(recipe?.id);
@@ -31,6 +33,13 @@ const Details = () => {
       </h2>
 
       <div className="icons">
+        {showKey && <div className="key"></div>}
+        <p onClick={() => setShowKey((prev) => !prev)}>
+          <span
+            className="iconify question-mark"
+            data-icon="fluent:book-question-mark-20-regular"
+          ></span>
+        </p>
         {recipe?.vegan && (
           <span
             className="iconify V"
@@ -74,6 +83,7 @@ const Details = () => {
           )}
         </ol>
       </div>
+      <SimilarItems id={recipe?.id!} />
     </div>
   );
 };

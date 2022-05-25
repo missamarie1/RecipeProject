@@ -16,6 +16,7 @@
   color: black;
   font-weight: 700;
   text-decoration: none;
+  text-align: center;
 }
 
 .Result .symbols {
@@ -32,11 +33,11 @@
   margin-top: 5px;
 }
 
-.Results i.fa-heart {
+.Result i.fa-heart {
   padding: 5px;
   margin-top: 5px;
-  color: white;
+  color: #0f9db0;
 }
-.Results .fav {
-  background-color: red;
+.Result i.fav {
+  color: red;
 }

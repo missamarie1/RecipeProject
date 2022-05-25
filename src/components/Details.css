@@ -52,6 +52,20 @@
   padding: 5px;
 }
 
+.Details .iconify {
+  font-size: 30px;
+}
+.Details .key {
+  background-color: red;
+  width: 20px;
+  height: 20px;
+}
+
+/* .Details .question-mark:hover {
+  display: block;
+  background-color: yellow;
+} */
+
 .Details .clock {
   margin-top: 5px;
   color: #0f9db0;
