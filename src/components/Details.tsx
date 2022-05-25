@@ -14,6 +14,7 @@ const Details = () => {
   const { addFav, isThisFav, deleteFav } = useContext(FavoritesContext);
   const isFav: boolean = isThisFav(recipe?.id!);
   const [showKey, setShowKey] = useState(false);
+
   // const instructions = document.querySelector(".instructions-paragraph");
   // const { addFav, isThisFav, deleteFav } = useContext(FavoritesContext);
   // const isFav: boolean = isThisFav(recipe?.id);
@@ -120,7 +121,7 @@ const Details = () => {
           )}
         </ol>
       </div>
-      <SimilarItems id={recipe?.id!} />
+      {recipe?.id && <SimilarItems id={recipe?.id!} />}
     </div>
   );
 };

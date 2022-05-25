@@ -13,7 +13,7 @@
   border-radius: 5px;
   width: 80vw;
   /* height: 50vh; */
-  position: relative;
+  /* position: relative; */
 }
 
 .Details .symbols {
@@ -31,9 +31,13 @@
   color: red;
 }
 
-.Details .heart {
-  margin-top: 5px;
+.Details i.fa-heart {
   padding: 5px;
+  margin-top: 5px;
+  color: #0f9db0;
+}
+.Details i.fav {
+  color: red;
 }
 .Details h2 {
   text-align: center;
