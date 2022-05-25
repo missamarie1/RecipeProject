@@ -3,6 +3,7 @@ import "./SimilarItems.css";
 import { getSimilarRecipes } from "../services/spoonacularService";
 import SimilarRecipeResponse from "../models/SimilarRecipeResponse";
 import Result from "./Result";
+import { Link } from "react-router-dom";
 
 interface Props {
   id: string;
@@ -14,12 +15,17 @@ const SimilarItems = ({ id }: Props) => {
     getSimilarRecipes(id).then((res) => {
       setSimilar(res);
     });
-  }, []);
+  }, [id]);
   return (
     <div className="SimilarItems">
-      {/* {similar.map((recipe) => (
-        // <Result recipe={title:recipe.title, image:recipe.sourceUrl} />
-      ))} */}
+      <h3>Similar Recipes:</h3>
+      {similar.map((recipe, index) => (
+        <li key={`${recipe.id}${index}`}>
+          <Link to={`/details/${recipe.id}`}>
+            <p>{recipe.title}</p>
+          </Link>
+        </li>
+      ))}
     </div>
   );
 };
