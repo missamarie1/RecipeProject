@@ -7,15 +7,27 @@
   box-sizing: border-box;
 }
 
+.SearchForm button {
+  border-radius: 10px 0 0 10px;
+  background-color: #0f9db0;
+  color: white;
+}
+
 .SearchForm .search-bar {
   display: flex;
   width: 80vw;
+  padding: 5px;
 }
 
 .SearchForm select {
   width: 80vw;
+  padding: 8px;
+  margin: 5px;
+  border-radius: 10px;
 }
 
-.SearchForm #search {
+.SearchForm input#search {
   flex: 1;
+  padding: 8px;
+  border-radius: 0 10px 10px 0;
 }

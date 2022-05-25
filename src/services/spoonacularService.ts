@@ -26,7 +26,7 @@ export const getRandomRecipe = (): Promise<RandomRecipeResponse> => {
 };
 
 export const getSimilarRecipes = (
-  id: number
+  id: string
 ): Promise<SimilarRecipeResponse[]> => {
   return axios
     .get(`https://api.spoonacular.com/recipes/${id}/similar`, {

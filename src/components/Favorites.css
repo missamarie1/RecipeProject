@@ -1,0 +1,13 @@
+.Favorites {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Favorites h2 {
+  text-align: center;
+}
+
+.Favorites li {
+  list-style-type: none;
+}
