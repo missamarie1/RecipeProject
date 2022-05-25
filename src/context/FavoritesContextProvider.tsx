@@ -10,6 +10,7 @@ interface Props {
 export default function FavoriteContextProvider({ children }: Props) {
   const [favorites, setFavorites] = useState<SearchResult[]>([]);
   const addFav = (recipe: SearchResult): void => {
+    console.log("test");
     setFavorites((prev) => {
       console.log("addFav works!", [...prev, recipe]);
 
