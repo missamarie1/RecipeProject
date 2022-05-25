@@ -6,8 +6,8 @@ import SearchResult from "../models/SearchResult";
 interface FavContextModel {
   favorites: SearchResult[];
   addFav: (r: SearchResult) => void;
-  isThisFav: (id: number) => boolean;
-  deleteFav: (id: number) => void;
+  isThisFav: (id: string) => boolean;
+  deleteFav: (id: string) => void;
 }
 //creating object
 const defaultValue: FavContextModel = {

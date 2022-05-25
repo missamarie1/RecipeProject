@@ -21,6 +21,9 @@ const SearchForm = ({
     updateSearchTerm(search);
     updateRestrictions(diet);
     updateGenre(type);
+    // updateGenre("");
+    // updateSearchTerm("");
+    // updateRestrictions("");
   };
 
   return (

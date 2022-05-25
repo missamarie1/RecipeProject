@@ -1,5 +1,5 @@
 export default interface SearchResult {
-  id: number;
+  id: string;
   title: string;
   image: string;
 }

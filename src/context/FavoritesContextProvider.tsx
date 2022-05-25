@@ -17,13 +17,13 @@ export default function FavoriteContextProvider({ children }: Props) {
       return [...prev, recipe];
     });
   };
-  const deleteFav = (id: number) => {
+  const deleteFav = (id: string) => {
     setFavorites((prev) => {
       const index: number = prev.findIndex((item) => item.id === id);
       return [...prev.slice(0, index), ...prev.slice(index + 1)];
     });
   };
-  const isThisFav = (id: number): boolean => {
+  const isThisFav = (id: string): boolean => {
     return favorites.some((fav) => {
       return fav.id === id;
     });

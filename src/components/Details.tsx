@@ -11,6 +11,8 @@ import SimilarItems from "./SimilarItems";
 const Details = () => {
   const id: string = useParams().id!;
   const [recipe, setRecipe] = useState<RecipeInformation>();
+  const { addFav, isThisFav, deleteFav } = useContext(FavoritesContext);
+  const isFav: boolean = isThisFav(recipe?.id!);
   const [showKey, setShowKey] = useState(false);
   // const instructions = document.querySelector(".instructions-paragraph");
   // const { addFav, isThisFav, deleteFav } = useContext(FavoritesContext);
@@ -22,18 +24,53 @@ const Details = () => {
   return (
     <div className="Details">
       <img className="picture" src={recipe?.image} alt={recipe?.title} />
-      <div className="stuff">
-        <span className={`iconify heart`} data-icon="akar-icons:heart"></span>
-        <i className="fa-brands fa-pinterest"></i>
+      <div className="symbols" onClick={() => console.log("div was clicked")}>
+        {isFav ? (
+          <i
+            className="fa-solid fa-heart fav"
+            onClick={() => deleteFav(recipe?.id!)}
+          ></i>
+        ) : (
+          <i className="fa-solid fa-heart" onClick={() => addFav(recipe!)}></i>
+        )}
+        <i className="fa-brands fa-pinterest"></i>{" "}
       </div>
 
-      <h2>
-        {/* make link to take to original Url */}
-        {recipe?.title}
-      </h2>
+      <a href={recipe?.sourceUrl}>
+        <h2>
+          {/* make link to take to original Url */}
+          {recipe?.title}
+        </h2>
+      </a>
 
       <div className="icons">
-        {showKey && <div className="key"></div>}
+        {showKey && (
+          <div className="key">
+            {/* <h3> Key: </h3> */}
+            <div>
+              <p>Vegan: </p>
+              <span
+                className="iconify V"
+                data-icon="emojione-monotone:letter-v"
+              ></span>
+            </div>
+            <div>
+              <p>Dairy Free: </p>
+              <span className="iconify dairy" data-icon="mdi:cow-off"></span>
+            </div>
+            <div>
+              <p>Gluten Free: </p>
+              <span className="iconify GF" data-icon="mdi:barley-off"></span>
+            </div>
+            <div>
+              <p>Vegetarian: </p>
+              <span
+                className="iconify veggie"
+                data-icon="charm:plant-pot"
+              ></span>
+            </div>
+          </div>
+        )}
         <p onClick={() => setShowKey((prev) => !prev)}>
           <span
             className="iconify question-mark"
@@ -63,7 +100,7 @@ const Details = () => {
         onClick={() => addFav()}
       ></span> */}
       </div>
-      <p>
+      <p className="clock-section">
         <span className="iconify clock" data-icon="akar-icons:clock"></span>{" "}
         <span>{recipe?.readyInMinutes}</span>
       </p>

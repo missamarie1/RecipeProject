@@ -16,15 +16,14 @@
   position: relative;
 }
 
-.Details .stuff {
+.Details .symbols {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  align-items: flex-end;
-  width: 80vw;
-
-  /* position: absolute; */
+  align-items: flex-start;
+  width: 40vw;
 }
+
 .Details .fa-pinterest {
   margin-top: 5px;
   padding: 5px;
@@ -51,24 +50,35 @@
   color: #0f9db0;
   padding: 5px;
 }
-
-.Details .iconify {
-  font-size: 30px;
-}
 .Details .key {
-  background-color: red;
-  width: 20px;
-  height: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  height: 150px;
+}
+.Details .iconify {
+  display: flex;
+  font-size: 30px;
 }
 
 /* .Details .question-mark:hover {
   display: block;
   background-color: yellow;
 } */
+.Details .clock-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  margin-top: 20px;
+}
 
 .Details .clock {
-  margin-top: 5px;
+  /* margin-top: 30px; */
   color: #0f9db0;
+  padding-right: 5px;
 }
 
 .Details p {

@@ -29,12 +29,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 5px; */
 }
 
-.Footer .fa-brands {
+.Footer a.fa-brands {
   display: flex;
-  color: #0f9db0;
+  text-decoration: none;
   justify-content: space-between;
   padding: 10px 10px 0 0;
+}
+.fa-facebook,
+.fa-instagram,
+.fa-twitter {
+  color: #0f9db0;
 }
