@@ -8,10 +8,13 @@ const Header = () => {
         <span className="iconify diner" data-icon="cil:dinner"></span>
       </Link>
       <h1>Good Eats</h1>
-      <Link to="/favorites">
-        {" "}
-        <span className="iconify heart" data-icon="akar-icons:heart"></span>
-      </Link>
+      <div className="favorites">
+        <p>Favorites: </p>
+        <Link to="/favorites">
+          {" "}
+          <span className="iconify heart" data-icon="akar-icons:heart"></span>
+        </Link>
+      </div>
     </div>
   );
 };

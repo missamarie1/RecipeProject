@@ -12,6 +12,7 @@ interface Props {
 const SimilarItems = ({ id }: Props) => {
   const [similar, setSimilar] = useState<SimilarRecipeResponse[]>([]);
   useEffect(() => {
+    window.scrollTo(0, 0);
     getSimilarRecipes(id).then((res) => {
       setSimilar(res);
     });

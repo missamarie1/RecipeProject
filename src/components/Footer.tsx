@@ -4,10 +4,18 @@ const Footer = () => {
   return (
     <div className="Footer">
       <div className="Socials">
-        <a href="facebook.com" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i className="fa-brands fa-facebook"></i>
         </a>
-        <a href="instagram.com" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i className="fa-brands fa-instagram"></i>
         </a>
         <a
