@@ -12,8 +12,6 @@
   margin-bottom: 5px;
   border-radius: 5px;
   width: 80vw;
-  /* height: 50vh; */
-  /* position: relative; */
 }
 
 .Details .symbols {
@@ -27,7 +25,6 @@
 .Details .fa-pinterest {
   margin-top: 5px;
   padding: 5px;
-
   color: red;
 }
 
@@ -39,10 +36,17 @@
 .Details i.fav {
   color: red;
 }
+
+.Details .similar-heading a {
+  text-decoration: none;
+  color: #0f9db0;
+}
 .Details h2 {
   text-align: center;
-  font-weight: 3ß00;
-  width: 80vw;
+  font-weight: 400;
+  font-style: bold;
+  color: #0f9db0;
+  width: 80%;
 }
 
 .Details .icons {
@@ -50,7 +54,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;
-  width: 80vw;
+  width: 80%;
   color: #0f9db0;
   padding: 5px;
 }
@@ -67,7 +71,7 @@
 }
 .Details .iconify {
   display: flex;
-  font-size: 30px;
+  font-size: 50px;
 }
 .Details .question-mark {
   position: relative;
@@ -77,7 +81,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
+  width: 100%;
   margin-top: 20px;
 }
 
@@ -95,18 +99,95 @@
   padding: 10px;
   font-weight: 700;
 }
+.Details li {
+  padding: 5px;
+}
 .Details .ingredients {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 10px;
-  font-weight: 300;
 }
 
 .Details .ingredients-list {
   font-weight: 100;
+  margin: 10px;
 }
 
 .Details .instructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 10px;
 }
-.Details li {
-  padding: 5px;
+.Details .instructions-list {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 40px;
+
+  font-weight: 100;
+}
+
+@media only screen and (min-width: 768px) {
+  .Details .section-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .Details .section-1 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 50%;
+    justify-content: stretch;
+    align-items: center;
+  }
+  .Details .picture {
+    display: flex;
+    align-self: center;
+    width: 500px;
+    margin: 10px;
+  }
+  .Details .symbols {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 10px;
+    width: 25px;
+    height: 25px;
+  }
+  .Details .similar-heading {
+    align-items: center;
+    width: 100%;
+    margin: 10px;
+  }
+  .Details .icons {
+    margin: 10px;
+  }
+
+  .Details .section-2 {
+    flex-direction: column;
+    flex: 1;
+    width: 50%;
+    justify-content: stretch;
+    align-items: center;
+  }
+  .Details li.instructions-list {
+    display: flex;
+    /* flex-direction: column;
+    margin: 10px; */
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    /* box-sizing: border-box; */
+  }
+  .Details .similar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 }

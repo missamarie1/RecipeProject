@@ -4,26 +4,27 @@
   margin: 10px;
 }
 
-.Footer .key {
+/* .Footer .key {
   display: flex;
-  /* margin: 5px; */
-  /* padding: 10px; */
-}
 
-.Footer .iconify {
+} */
+
+/* .Footer .iconify {
+  width: 25px;
+  height: 25px;
   color: #0f9db0;
-}
+} */
 
-.Footer .key div {
+/* .Footer .key div {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
-.Footer .key p {
+/* .Footer .key p {
   text-align: center;
-}
+} */
 
 .Footer .Socials {
   display: flex;
@@ -42,4 +43,6 @@
 .fa-twitter {
   color: #0f9db0;
   padding: 5px;
+  width: 50px;
+  height: 50px;
 }
