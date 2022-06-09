@@ -1,7 +1,7 @@
 .Header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: relative;
   background-color: #0f9db0;
@@ -9,34 +9,43 @@
   font-family: "Gloria Hallelujah", cursive;
   /* margin: 10px; */
   width: 100%;
-  height: 20vh;
+  height: 125px;
 }
-.Header h1 {
-  margin: 10px;
-}
+/* .Header .good-eats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
 .Header .diner {
   display: flex;
   color: black;
   margin: 10px;
   height: 75px;
   width: 75px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .Header .favorites {
-  margin: 20px;
-  padding: 10px;
+  /* margin: 20px;
+  padding: 10px; */
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: flex-end;
+  position: absolute;
   bottom: 0;
   right: 0;
+}
+.Header .faves {
+  padding-bottom: 6px;
 }
 
 .Header .heart {
   display: flex;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  /* bottom: 0;
+  right: 0; */
   color: white;
   padding: 10px;
   width: 25px;

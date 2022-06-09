@@ -42,7 +42,6 @@
 .fa-instagram,
 .fa-twitter {
   color: #0f9db0;
-  padding: 5px;
-  width: 50px;
-  height: 50px;
+  padding: 10px;
+  font-size: 30px;
 }

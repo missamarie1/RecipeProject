@@ -8,8 +8,10 @@
 .Result .picture {
   border-radius: 10px;
   box-shadow: 5px;
+  display: flex;
   justify-content: center;
   align-items: center;
+  width: 300px;
 }
 
 .Result a {
@@ -22,24 +24,31 @@
 .Result .symbols {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   width: 40vw;
 }
 
-.Result .fa-pinterest {
+.Result i.fa-pinterest {
   color: red;
   padding: 5px;
   margin-top: 5px;
+  font-size: 25px;
 }
 
 .Result i.fa-heart {
   padding: 5px;
   margin-top: 5px;
   color: #0f9db0;
+  font-size: 25px;
 }
 .Result i.fav {
   color: red;
+}
+.Result h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -50,7 +59,7 @@
   }
   .Result .picture {
     align-self: center;
-    width: 500px;
+    width: 400px;
     margin: 10px;
   }
 
