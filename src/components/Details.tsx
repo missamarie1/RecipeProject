@@ -162,18 +162,22 @@ const Details = () => {
                   ))}
                 </ul>
               </div>
-              <div className="instructions">
-                <h3>Instructions:</h3>
-                <ol className="instructions-list">
-                  {recipe?.analyzedInstructions.map((instruction) =>
-                    instruction.steps.map((step) => (
-                      <li key={Math.floor(Math.random() * 1000)}>
-                        {step.step}
-                      </li>
-                    ))
-                  )}
-                </ol>
-              </div>
+              {recipe.analyzedInstructions.length > 0 ? (
+                <div className="instructions">
+                  <h3>Instructions:</h3>
+                  <ol className="instructions-list">
+                    {recipe?.analyzedInstructions.map((instruction) =>
+                      instruction.steps.map((step) => (
+                        <li key={Math.floor(Math.random() * 1000)}>
+                          {step.step}
+                        </li>
+                      ))
+                    )}
+                  </ol>
+                </div>
+              ) : (
+                <p className="alternative">Instructions not available.</p>
+              )}
             </section>
           </div>
           <div className="similar">
@@ -181,7 +185,7 @@ const Details = () => {
           </div>
         </div>
       ) : (
-        <p>Loading...</p>
+        <p className="loading">Loading...</p>
       )}
     </>
   );

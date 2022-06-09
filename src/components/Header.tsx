@@ -7,9 +7,9 @@ const Header = () => {
       <Link to="/">
         <span className="iconify diner" data-icon="cil:dinner"></span>
       </Link>
-      <h1>Good Eats</h1>
+      <h1 className="good-eats">Good Eats</h1>
       <div className="favorites">
-        <p>Favorites: </p>
+        <p className="faves">Favorites: </p>
         <Link to="/favorites">
           {" "}
           <span className="iconify heart" data-icon="akar-icons:heart"></span>

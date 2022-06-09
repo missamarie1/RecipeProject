@@ -12,26 +12,30 @@
   margin-bottom: 5px;
   border-radius: 5px;
   width: 80vw;
+  margin-bottom: 10px;
 }
 
 .Details .symbols {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   width: 40vw;
+  margin-bottom: 10px;
 }
 
 .Details .fa-pinterest {
   margin-top: 5px;
   padding: 5px;
   color: red;
+  font-size: 30px;
 }
 
 .Details i.fa-heart {
   padding: 5px;
   margin-top: 5px;
   color: #0f9db0;
+  font-size: 30px;
 }
 .Details i.fav {
   color: red;
@@ -57,6 +61,7 @@
   width: 80%;
   color: #0f9db0;
   padding: 5px;
+  margin-top: 10px;
 }
 .Details .key {
   display: flex;
@@ -68,6 +73,12 @@
   position: absolute;
   left: 0;
   bottom: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
+  padding: 10px;
+  background-color: #012c31;
+  border-radius: 5px;
+  z-index: 10;
 }
 .Details .iconify {
   display: flex;
@@ -102,7 +113,8 @@
 .Details li {
   padding: 5px;
 }
-.Details .ingredients {
+.Details .section-1,
+.section-2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -130,7 +142,16 @@
 
   font-weight: 100;
 }
-
+.Details .alternative {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+}
+.Details .loading {
+  margin: 20px;
+  padding: 20px;
+}
 @media only screen and (min-width: 768px) {
   .Details .section-container {
     display: flex;
